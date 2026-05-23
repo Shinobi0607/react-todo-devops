@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: todo-app
+  namespace: argocd              # ArgoCD must be installed in this namespace
+spec:
+  project: default
+
+  # Where to pull the manifests from (your Git repo)
+  source:
+    repoURL: https://github.com/YOUR_GITHUB_USERNAME/react-todo-devops
+    targetRevision: main
+    path: helm/todo-app          # Path to the Helm chart in your repo
+    helm:
+      valueFiles:
+        - values.yaml
+
+  # Where to deploy
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+
+  # Auto-sync: ArgoCD watches Git and applies changes automatically
+  syncPolicy:
+    automated:
+      prune: true                # Remove resources deleted from Git
+      selfHeal: true             # Revert manual changes in cluster
+    syncOptions:
+      - CreateNamespace=true
