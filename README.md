@@ -1,4 +1,4 @@
-# 🚀 React Todo App — Containerized DevOps Project #
+# 🚀 React Todo App — Containerized DevOps Project
 
 > React · Docker · NGINX · Kubernetes · Helm · GitHub Actions · ArgoCD
 
