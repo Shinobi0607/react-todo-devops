@@ -40,7 +40,7 @@ jobs:
     if: github.ref == 'refs/heads/main'  # Only on main branch pushes
 
     permissions:
-      contents: read
+      contents: write
       packages: write                     # Needed to push to GHCR
 
     steps:
