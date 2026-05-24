@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: todo-app
-          image: ghcr.io/YOUR_GITHUB_USERNAME/react-todo-devops:latest
+          image: ghcr.io/shinobi0607/react-todo-devops:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80

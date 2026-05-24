@@ -2,8 +2,8 @@
 replicaCount: 2
 
 image:
-  repository: ghcr.io/YOUR_GITHUB_USERNAME/react-todo-devops
-  tag: sha-9abffab
+  repository: ghcr.io/shinobi0607/react-todo-devops
+  tag: latest
   pullPolicy: Always
 
 service:

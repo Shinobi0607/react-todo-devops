@@ -8,7 +8,7 @@ spec:
 
   # Where to pull the manifests from (your Git repo)
   source:
-    repoURL: https://github.com/YOUR_GITHUB_USERNAME/react-todo-devops
+    repoURL: https://github.com/shinobi0607/react-todo-devops
     targetRevision: main
     path: helm/todo-app          # Path to the Helm chart in your repo
     helm:
